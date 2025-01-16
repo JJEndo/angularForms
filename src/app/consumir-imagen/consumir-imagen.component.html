@@ -1,0 +1,24 @@
+<h1>Get data from the Api</h1>
+
+<ul *ngFor="let cart of carts">
+  <!-- Card para cada carrito de usuario con clases de tamaño pequeño y hover -->
+  <div class="card mb-3 shadow-sm hover-card">
+    <!-- Imagen del carrito al principio -->
+    <img [src]="shopping" class="card-img-top" alt="Imagen del carrito" style="height: 150px; object-fit: cover;">
+    
+    <div class="card-body">
+      <h5 class="card-title">Carrito de usuario: {{ cart.userId }}</h5>
+
+      <!-- Lista de productos en el carrito -->
+      <ul class="list-group list-group-flush">
+        <li *ngFor="let product of cart.products" class="list-group-item">
+          <!-- Imagen del producto antes de la información -->
+          <img [src]="product.thumbnail" alt="{{ product.title }}" width="80" class="mr-3" />
+          <!-- Información del producto -->
+          <strong>{{ product.title }}</strong> - Precio: {{ product.price }} - Cantidad: {{ product.quantity }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</ul>
+
