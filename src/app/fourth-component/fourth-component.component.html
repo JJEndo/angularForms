@@ -1,0 +1,25 @@
+<p>fourth-component works!</p>
+<h1>Componente Cuarto</h1>
+<h2>Directivas</h2>
+<p>El título del componente es {{ message }}</p>
+<label>Escribe tu mensaje personalizado</label>
+<input type="text" [(ngModel)]="message" />
+<div>
+  <h3>Estilos</h3>
+  <p>El título del componente es {{ message }}</p>
+  <div [ngStyle]="currentStyles">
+    <p>Este es un párrafo con estilos</p>
+  </div>
+</div>
+<ul>
+    <p>Lista de productos</p>
+  <li *ngFor="let product of products">
+    {{ product }}
+  </li>
+</ul>
+<div>
+    <p>Lista de clientes</p>
+  <li *ngFor="let client of clients">
+    {{ client.name }}
+  </li>
+</div>

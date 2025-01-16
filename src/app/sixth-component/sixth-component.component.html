@@ -1,0 +1,9 @@
+<h1>Get data from the Api</h1>
+<ul *ngFor="let cart of carts">
+    <h2>Carrito de usuario: {{ cart.userId }}</h2>
+    <li *ngFor="let product of cart.products">
+      <strong>{{ product.title }}</strong> - Precio: {{ product.price }} - Cantidad: {{ product.quantity }}
+      <br>
+      <img [src]="product.thumbnail" alt="{{ product.title }}" width="100" />
+    </li>
+  </ul>
